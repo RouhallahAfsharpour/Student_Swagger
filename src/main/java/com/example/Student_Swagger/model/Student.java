@@ -1,4 +1,4 @@
-package com.example.Student_Swagger;
+package com.example.Student_Swagger.model;
 
 public class Student {
     private String id;

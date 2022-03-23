@@ -1,5 +1,6 @@
-package com.example.Student_Swagger;
+package com.example.Student_Swagger.controller;
 
+import com.example.Student_Swagger.model.Student;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
