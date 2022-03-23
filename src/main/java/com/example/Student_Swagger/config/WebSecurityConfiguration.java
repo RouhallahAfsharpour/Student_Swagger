@@ -24,8 +24,15 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         // ... here goes your custom security configuration
-        http.authorizeRequests().
-                antMatchers(AUTH_WHITELIST).permitAll(). // whitelist URL permitted
-                antMatchers("/**").authenticated(); // others need auth
+        http.
+                csrf().disable().
+                authorizeRequests()
+                .antMatchers(
+                        "/v2/api-docs",
+                        "/swagger-resources/**",
+                        "/swagger-ui.html",
+                        "/webjars/**" ,
+                        /*Probably not needed*/ "/swagger.json")
+                .permitAll();
     }
 }

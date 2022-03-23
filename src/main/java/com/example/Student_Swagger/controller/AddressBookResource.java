@@ -9,7 +9,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 @RestController
-//@RequestMapping("/api")
 public class AddressBookResource {
     ConcurrentMap<String, Student> students = new ConcurrentHashMap<>();
 
